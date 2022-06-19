@@ -22,12 +22,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/faq', [FAQController::class, 'index']);
-Route::post('/faq', [FAQController::class, 'store'])->middleware(['auth']);
-Route::get('/faq/create', [FAQController::class, 'create'])->middleware(['auth']);
-Route::get('/faq/{faq}', [FAQController::class, 'show']);
-Route::get('/faq/{faq}/edit', [FAQController::class, 'edit'])->middleware(['auth']);
-Route::put('/faq/{faq}', [FAQController::class, 'update'])->middleware(['auth']);
-Route::delete('/faq/{faq}', [FAQController::class, 'destroy'])->middleware(['auth']);
+Route::resource('/faq', FAQController::class)->middleware(['auth']);
 
 require __DIR__.'/auth.php';
