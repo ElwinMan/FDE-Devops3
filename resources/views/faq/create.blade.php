@@ -1,6 +1,10 @@
-@extends('layout')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('FAQ') }}
+        </h2>
+    </x-slot>
 
-@section('content')
     <div id="page" class="container">
         <h1>New FAQ</h1>
 
@@ -60,4 +64,4 @@
 
         </form>
     </div>
-@endsection
+</x-app-layout>
