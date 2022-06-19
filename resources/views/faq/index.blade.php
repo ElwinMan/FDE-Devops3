@@ -11,7 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <h1>FAQ</h1>
                     <div>
-                        <h2><a href="{{ route('faq.create') }}">Create New FAQ</a></h2>
+                        <h2 style="color:blue;"><a href="{{ route('faq.create') }}">Create New FAQ</a></h2>
                     </div>
                     <ul>
                         @foreach($faqs as $faq)
