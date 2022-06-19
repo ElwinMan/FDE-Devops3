@@ -15,7 +15,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <a class="{{ Request::path() === 'faq' ? 'current_page_item' : ''}}" href='faq'>FAQs</a>
+                    <a href=/faq class="{{ Request::is('faq*') ? 'current_page_item' : '' }}">FAQ</a>
                 </div>
             </div>
 
